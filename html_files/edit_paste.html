@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastes</title>
+</head>
+<body>
+    <h1>Create Paste</h1>
+    <form method="post" action="/api/paste/edit/{{paste_id}}">
+        <label for="title">Enter Title: </label><br>
+        <textarea type="text" id="title" name="title" rows="2" cols="100" >Optional</textarea>
+        <br><label for="content">Enter Content: </label><br>
+        <textarea type="text" id="content" name="content" rows="20"cols="100"></textarea> 
+
+        
+        <br><input class="submit" type="submit" value="Submit">
+     </form>
+</body>
+</html>

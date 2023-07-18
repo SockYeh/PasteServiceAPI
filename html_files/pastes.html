@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{paste["title"]}}</title>
+</head>
+<body>
+    <h1>{{paste["title"]}}</h1>
+    <h2>Created at {{paste["created_at"]}}</h2>
+    <h2>Expires at {{paste["expires_at"]}}</h2>
+    <h2>Author: {{paste["author"]}}</h2>
+    <h2>Type: {{paste["type"]}}</h2>
+    
+
+    <textarea class="content"readonly>{{paste['content']}}</textarea>
+    <form method="get" action="{{url_for('paste_delete',paste_id=paste_id)}}">  
+        <button>Delete</button>  
+    </form>
+    <form method="get" action="{{url_for('paste_edit',paste_id=paste_id)}}">  
+        <button>Edit</button>  
+    </form>
+</body>
+</html>

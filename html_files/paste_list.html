@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastes</title>
+</head>
+<body>
+    <h1>Pastes</h1>
+    <ul>
+        {%for id, post in pastes.items()%}
+            <li><a href="/paste/{{id}}">{{post["title"]}}</a> Created at {{post["created_at"]}}</li>
+        {%endfor%}
+    </ul>
+</body>
+</html>

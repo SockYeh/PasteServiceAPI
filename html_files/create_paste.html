@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastes</title>
+</head>
+<body>
+    <h1>Create Paste</h1>
+    <form method="post" action="/api/paste">
+        <label for="title">Enter Title: </label><br>
+        <textarea type="text" id="title" name="title" rows="2" cols="100">Optional</textarea>
+        <br><label for="content">Enter Content: </label><br>
+        <textarea type="text" id="content" name="content" rows="20"cols="100"></textarea> 
+
+        <br><label for="ttype">Enter Type: </label><br>
+            <select name="ttype" id="ttype">
+                <option value="public"{% if request.value == "public" %} selected{% endif %}>Public</option>
+                <option value="private">private</option>
+            </select>
+            
+        <br><label for="expires">Enter Expiry: </label><br>
+            <select name="expires" id="expires">
+                <option value="never"{% if request.value == "never" %} selected{% endif %}>Never</option>
+                <option value="10m">10 Minutes</option>
+                <option value="1h">1 Hour</option>
+                <option value="1d">1 Day</option>
+                <option value="7d">7 Days</option>
+            </select>
+        <br><input class="submit" type="submit" value="Submit">
+     </form>
+</body>
+</html>
